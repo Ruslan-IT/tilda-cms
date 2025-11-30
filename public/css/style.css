@@ -2552,7 +2552,7 @@ textarea {
     }
     .product-qty-value {
         font-size: 14px;
-        min-width: 13px;
+        min-width: 8px;
     }
     .cart-badge {
         padding: 6px 8px!important;
