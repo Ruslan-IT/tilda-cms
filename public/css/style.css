@@ -2547,6 +2547,18 @@ textarea {
 }
 
 @media (max-width: 480px) {
+    .product-quantity-control{
+        padding: 4px 2px;
+    }
+    .product-qty-value {
+        font-size: 14px;
+        min-width: 13px;
+    }
+    .cart-badge {
+        padding: 6px 8px!important;
+    }
+
+
   .cart-icon {
     bottom: 60px;
     right: 25px;
