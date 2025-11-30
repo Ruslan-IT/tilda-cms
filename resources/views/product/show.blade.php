@@ -261,7 +261,80 @@
             </div>
         </div>
     </section>
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-overlay"></div>
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2 class="cart-modal-title">Корзина</h2>
+                <button class="cart-modal-close" aria-label="Close">×</button>
+            </div>
 
+            <div class="cart-modal-body" id="cartModalBody">
+                <!-- Empty cart message -->
+                <div class="cart-empty" id="cartEmpty">
+                    <p>Ваша корзина пуста</p>
+                    <button class="btn-continue-shopping" onclick="closeCartModal()">
+                        Продолжить покупки
+                    </button>
+                </div>
+
+                <!-- Cart items -->
+                <div class="cart-items" id="cartItems"></div>
+            </div>
+
+            <div class="cart-modal-footer" id="cartFooter" style="display: none">
+                <div class="cart-total">
+                    <span class="cart-total-label">Итого:</span>
+                    <span class="cart-total-price" id="cartTotalPrice">0 ₽</span>
+                </div>
+
+                <form id="cartCheckoutForm" class="cart-checkout-form">
+                    <div class="cart-form-group">
+                        <label for="cartCustomerName">Имя</label>
+                        <input type="text" id="cartCustomerName" placeholder="Ваше полное имя" required="">
+                    </div>
+
+                    <div class="cart-form-group">
+                        <label for="cartCustomerContact">Контакт</label>
+                        <p>(email, телефон, мессенджеры)</p>
+                        <input type="text" id="cartCustomerContact" placeholder="Телефон или Email" required="">
+                    </div>
+
+                    <div class="cart-form-group">
+                        <label for="cartCustomerAddress">Адрес доставки</label>
+                        <p>не обязательно</p>
+                        <textarea id="cartCustomerAddress" placeholder="Город, улица, дом, квартира" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="cart-checkout-btn">
+                        <span class="cart-checkout-btn-text">Оформить заказ</span>
+                        <span class="cart-checkout-btn-loader"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Success screen -->
+            <div class="cart-success" id="cartSuccess" style="display: none">
+                <div class="cart-success-icon">✓</div>
+                <h3 class="cart-success-title">Заказ успешно оформлен!</h3>
+                <div class="cart-success-info">
+                    <p>
+                        <strong>Номер заказа:</strong>
+                        <span id="successCartOrderId"></span>
+                    </p>
+                    <p><strong>Сумма:</strong> <span id="successCartTotal"></span></p>
+                </div>
+                <p class="cart-success-message">
+                    Наш менеджер свяжется с вами в ближайшее время для подтверждения
+                    заказа.
+                </p>
+                <button class="cart-success-btn" onclick="closeCartModal()">
+                    Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
     {{-- Передача данных в JS --}}
 
         <script>

@@ -183,7 +183,7 @@
                     заказа.
                 </p>
                 <button class="cart-success-btn" onclick="closeCartModal()">
-                    Close
+                    Закрыть
                 </button>
             </div>
         </div>

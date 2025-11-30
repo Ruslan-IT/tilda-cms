@@ -567,6 +567,6 @@ document
         // Bu yerda formani serverga yuborish logikasi bo'ladi
         console.log("Form yuborildi:", { email, name, comments });
 
-        alert("Спасибо! Ваш запрос отправлен.");
+       /* alert("Спасибо! Ваш запрос отправлен.");*/
         this.reset();
     });
