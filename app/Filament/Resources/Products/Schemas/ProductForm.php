@@ -40,7 +40,7 @@ class ProductForm
                     ->preserveFilenames()
                     ->nullable(),
 
-                RichEditor::make('short_description')
+               /* RichEditor::make('short_description')
                     ->label('Описание основное')
                     ->columnSpanFull()
                     ->toolbarButtons([
@@ -57,7 +57,7 @@ class ProductForm
                         'codeBlock',
                         'undo',
                         'redo',
-                    ]),
+                    ]),*/
             ]);
     }
 }

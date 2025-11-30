@@ -395,7 +395,7 @@ document.getElementById('customDiskClosePopup').addEventListener('click', functi
 
 function initProductPage(productData) {
 
-       
+
         loadCartFromLocalStorage();
 
         const buyBtn = document.getElementById("buyBtn");
