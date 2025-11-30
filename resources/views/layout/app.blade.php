@@ -9,7 +9,7 @@
     <meta name="description" content="Films HDD - фильмы на жестком диске. Лучшие коллекции фильмов без подписок, рекламы и интернета!">
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+    <link rel="icon" href="{{ asset('/name.png') }}">
 </head>
 
 <body>
