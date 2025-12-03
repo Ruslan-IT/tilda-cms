@@ -18,8 +18,10 @@
                     >
 
                         <div class="product-image">
+                            <a href="{{ route('product.show', $product->id) }}" >
                             <img src="{{ $product->image ? asset('storage/'.$product->image) : 'assets/images/no-image.png' }}"
                                  alt="{{ $product->name }}">
+                            </a>
                         </div>
 
                         <div class="product-info">
