@@ -151,6 +151,12 @@
                     </div>
 
                     <div class="cart-form-group">
+                        <label for="cartCustomerEmail">Email*</label>
+                        <p>(email, на который придет заказ)</p>
+                        <input type="email" id="cartCustomerEmail"  placeholder="Телефон или Email" required>
+                    </div>
+
+                    <div class="cart-form-group">
                         <label for="cartCustomerContact">Контакт</label>
                         <p>(email, телефон, мессенджеры)</p>
                         <input type="text" id="cartCustomerContact" placeholder="Телефон или Email" required="">

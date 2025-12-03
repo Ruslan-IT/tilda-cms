@@ -248,8 +248,9 @@ async function handleCartCheckout(e) {
     let name = document.getElementById('cartCustomerName').value;
     let contact = document.getElementById('cartCustomerContact').value;
     let address = document.getElementById('cartCustomerAddress').value;
+    let email = document.getElementById('cartCustomerEmail').value;
 
-    if (!name || !contact || !address) {
+    if (!name || !contact || !address || !email) {
         alert("Заполните все поля");
         return;
     }
@@ -262,6 +263,7 @@ async function handleCartCheckout(e) {
     let items = cart.map(item => ({
         id: item.id,
         title: item.title,
+        email: item.email,
         quantity: item.quantity,
         price: item.price,
         subtotal: item.price * item.quantity,
@@ -272,6 +274,7 @@ async function handleCartCheckout(e) {
         name,
         contact,
         address,
+        email,
         items,
         total: calculateTotal()
     };
@@ -285,6 +288,7 @@ async function handleCartCheckout(e) {
             },
             body: JSON.stringify(data)
         });
+
 
         res = await res.json();
 
@@ -329,6 +333,7 @@ function handleBuyButtonClick(event) {
     addToCart({
         id: card.dataset.collectionId,
         title: card.dataset.collectionTitle,
+        email: card.dataset.cartCustomerEmail,
         price: parseInt(card.dataset.collectionPrice),
         image: card.dataset.collectionImage
     });
